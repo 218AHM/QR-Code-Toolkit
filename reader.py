@@ -16,7 +16,7 @@ class QRCodeReader:
         self.master = master
         self.master.title("QR Code Reader")
         self.master.geometry("450x230+700+200")
-        self.master.iconbitmap("images\qrcode.ico")
+        self.master.iconbitmap("qrcode.ico")
         self.master.resizable(False, False)
 
         # Layout:
@@ -24,13 +24,13 @@ class QRCodeReader:
         self.f3.place(x=0, y=0)
 
         self.iconback = PhotoImage(
-            file="images\iconBack.png")   # Creates a PhotoImage object named "iconback" by loading the image file "images\iconBack.png"
+            file="iconBack.png")   # Creates a PhotoImage object named "iconback" by loading the image file "iconBack.png"
         self.back_icon = self.iconback.subsample(5, 5)  # reduce "iconback" object (image) size
         self.back_button = tk.Button(self.master, image=self.back_icon, activebackground="#4D677A", activeforeground="White",
                                     compound=CENTER, fg="White", bg="#4D677A", relief="flat", command=self.go_back)
         self.back_button.place(x=2, y=2)
 
-        self.iconbrowse = PhotoImage(file = "images\iconBrowse.png")
+        self.iconbrowse = PhotoImage(file = "iconBrowse.png")
         self.browse_icon = self.iconbrowse.subsample(3, 3)  # reduce "iconbrowse" object (image) size
         self.browse_button = Button(self.f3, text = ' Browse', image = self.browse_icon, compound = LEFT, bg="#4D677A", relief="flat", fg="White", activebackground="#4D677A", activeforeground="White", command=self.browse_file)
         self.browse_button.place(x=190, y=20)
@@ -44,7 +44,7 @@ class QRCodeReader:
         self.qr_data_entry.place(x=95, y=95)
 
         self.iconcopy = PhotoImage(
-            file="images\iconCopy.png")
+            file="iconCopy.png")
         self.copy_icon = self.iconcopy.subsample(12, 12)
         self.copy_button = tk.Button(self.master, image=self.copy_icon, activebackground="#4D677A", activeforeground="White",
                                     compound=CENTER, fg="White", bg="#4D677A", relief="flat", command=self.copy)
