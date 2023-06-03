@@ -13,7 +13,7 @@ class QRCodeGenerator:
         self.master = master
         self.master.title("QR Code Generator")
         self.master.geometry("450x230+700+200")
-        self.master.iconbitmap("images\qrcode.ico")
+        self.master.iconbitmap("qrcode.ico")
         self.master.resizable(False, False)
 
         # Layout:
@@ -21,7 +21,7 @@ class QRCodeGenerator:
         self.f.place(x=0, y=0)
 
         self.iconback = PhotoImage(
-            file="images\iconBack.png")   # Creates a PhotoImage object named "iconback" by loading the image file "images\iconBack.png"
+            file="iconBack.png")   # Creates a PhotoImage object named "iconback" by loading the image file "iconBack.png"
         self.back_icon = self.iconback.subsample(5, 5)  # reduce "iconback" object (image) size
         self.back_button = tk.Button(self.master, image=self.back_icon, activebackground="#4D677A", activeforeground="White",
                                     compound=CENTER, fg="White", bg="#4D677A", relief="flat", command=self.go_back)
@@ -36,7 +36,7 @@ class QRCodeGenerator:
         self.link_entry.place(x=85, y=70)
 
         self.iconpaste = PhotoImage(
-            file="images\iconPaste.png")
+            file="iconPaste.png")
         self.paste_icon = self.iconpaste.subsample(15, 15)
         self.paste_button = tk.Button(self.master, image=self.paste_icon, activebackground="#4D677A", activeforeground="White",
                                     compound=CENTER, fg="White", bg="#4D677A", relief="flat", command=self.paste)
