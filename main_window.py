@@ -11,7 +11,7 @@ class MainWindow:
         self.master = master
         self.master.title("QR Code Tool")
         self.master.geometry("360x150+700+200")
-        self.master.iconbitmap("qrcode.ico")
+        self.master.iconbitmap("images\qrcode.ico")
         self.master.resizable(False, False)
 
         # Layout:
